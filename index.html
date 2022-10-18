@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Starbucks Website Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <section>
@@ -28,21 +29,25 @@
          </div>
         </div>
         <ul class="thumb">
-        <li><img src="img/thumb1.png" onmouseover="imgSlider('img/img1.png')" ></li>   
-        <li><img src="img/thumb2.png" onmouseover="imgSlider('img/img2.png')" ></li>
-        <li><img src="img/thumb3.png" onmouseover="imgSlider('img/img3.png')" ></li>
+        <li><img src="img/thumb1.png" onmouseover="imgSlider('img/img1.png');changecirclecolor('#017143')"></li>   
+        <li><img src="img/thumb2.png" onmouseover="imgSlider('img/img2.png');changecirclecolor('#eb7595')"></li>
+        <li><img src="img/thumb3.png" onmouseover="imgSlider('img/img3.png');changecirclecolor('#d752b1')"></li>
         </ul>
         <ul class="sci">
-            <li><a href="#"><img src="img/facebook.png"</a></li>
-            <li><a href="#"><img src="img/twitter.png"</a></li>
-            <li><a href="#"><img src="img/instagram.png"</a></li>
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
         </ul>
     </section>
 
     <script type="text/javascript">
         function imgSlider(anything){
-         Document.queryselector('.starbucks').src = anything;
+         document.queryselector('.starbucks').src = anything;
       }
-            </script>
-            </body>
-            </html>
+      function changecirclecolor(color){
+        const circle = document .querySelector('.circle');
+        circle.style.background =color;
+    }
+     </script>
+    </body>
+    </html>
